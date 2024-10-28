@@ -1,14 +1,27 @@
+import React, { PureComponent, ComponentType } from 'react';
 import './App.css';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Footer />
-    </div>
-  );
-}
 
-export default App;
+export interface AppComponentProps {
+  Header:ComponentType;
+  Footer: ComponentType;
+} 
+
+
+
+export class AppComponent extends PureComponent<AppComponentProps> {
+  render() {
+    const {
+      Header,
+      Footer
+    } = this.props
+    return ( 
+      <div className="App">
+        <Header />
+        <Footer />
+      </div>
+    )
+  }
+} 
+
+export default AppComponent;
