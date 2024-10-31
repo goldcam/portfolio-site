@@ -4,15 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
+import Header from './components/header/index';
+import Name from './components/name/index';
+import Footer from './components/footer/index';
+import SocialLinksComponent from './components/socialLinks';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App Header={Header} Footer={Footer} />
+    <App Header={Header} Name={Name} Footer={Footer} SocialLinks={SocialLinksComponent} />
   </React.StrictMode>
 );
 
