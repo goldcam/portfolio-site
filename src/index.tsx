@@ -7,14 +7,16 @@ import reportWebVitals from './reportWebVitals';
 import Header from './components/header/index';
 import Name from './components/name/index';
 import Footer from './components/footer/index';
-import SocialLinksComponent from './components/socialLinks';
+import SocialLinks from './components/socialLinks';
+import Nav from './components/nav';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App Header={Header} Name={Name} Footer={Footer} SocialLinks={SocialLinksComponent} />
+    <App Header={Header} Name={Name} Footer={Footer} SocialLinks={SocialLinks} Nav={Nav} />
   </React.StrictMode>
 );
 

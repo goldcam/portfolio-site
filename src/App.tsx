@@ -6,6 +6,7 @@ export interface AppComponentProps {
   Footer: ComponentType;
   Name: ComponentType;
   SocialLinks: ComponentType;
+  Nav: ComponentType;
 } 
 
 
@@ -16,27 +17,26 @@ export class AppComponent extends PureComponent<AppComponentProps> {
       Header,
       Name,
       Footer,
-      SocialLinks
+      SocialLinks,
+      Nav
     } = this.props
     return ( 
-      <div className="App min-h-screen">
+    <>
+      <Nav />
+      <div className="lg:flex lg:justify-between max-w-screen-lg mx-auto">
         <Header />
-        
-        <section>
 
-          <aside className='border-2 border-slate-300'>
-            <Name />
-            <SocialLinks />
-          </aside>
+        <section className='flex pt-24 lg:w-3/5 lg:py-24'>
+       
           <main>
           main content here...
           </main>
           
         </section>
-        <Footer />
-        
-        
       </div>
+      {/* <Footer /> */}
+    </>
+      
     )
   }
 } 
