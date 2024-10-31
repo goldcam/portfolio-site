@@ -12,6 +12,9 @@
         @apply font-montserrat;
         @apply font-normal;        
     }
+    .navListItem:first-child {
+        @apply ml-0;
+    }
     .link {
         @apply transition;
         @apply ease-in-out;

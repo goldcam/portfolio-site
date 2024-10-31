@@ -3,7 +3,7 @@ import  { PureComponent, } from 'react';
 export class NavComponent extends PureComponent {
     render () {
         return (
-            <nav className="nav flex justify-end mt-4 mx-auto max-w-screen-lg">
+            <nav className="nav flex md:justify-end md:mt-4 md:mx-auto mb-4 sm:mb-0 max-w-screen-lg">
             <ul>
                 <li className='navListItem'>
                     <a className='link'>about</a>

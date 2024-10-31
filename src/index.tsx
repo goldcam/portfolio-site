@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App Header={Header} Name={Name} Footer={Footer} SocialLinks={SocialLinks} Nav={Nav} />
+    <App  Header={Header} Name={Name} Footer={Footer} SocialLinks={SocialLinks} Nav={Nav} />
   </React.StrictMode>
 );
 
