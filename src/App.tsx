@@ -1,6 +1,8 @@
 import  { PureComponent, ComponentType } from 'react';
 
 
+import AboutComponent from './pages/about';
+
 export interface AppComponentProps {
   Header:ComponentType;
   Footer: ComponentType;
@@ -29,7 +31,7 @@ export class AppComponent extends PureComponent<AppComponentProps> {
         <section className='flex pt-24 lg:w-3/5 lg:py-24'>
        
           <main>
-          main content here...
+            <AboutComponent />
           </main>
           
         </section>
