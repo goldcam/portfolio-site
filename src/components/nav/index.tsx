@@ -1,24 +1,24 @@
 import  { PureComponent, } from 'react';
 
+enum NavItems {
+    About = 'about',
+    Experience= 'experience',
+    Work = 'work',
+    Contact = 'contact', 
+}
+
 export class NavComponent extends PureComponent {
     render () {
+        const navItems = Object.keys(NavItems)
         return (
-            <nav className="nav flex md:justify-end md:mt-4 md:mx-auto mb-4 sm:mb-0 max-w-screen-lg">
-            <ul>
+            <nav className="nav pt-20 lg:w-1/6 lg:py-20 ">
+            <ul className='border-l-2 border-whiteish'>
+
+           { navItems.map((item, key) =>  (<li key={key} className='navListItem'>
+                    <a href='#about' className='link'>{item}</a>
+                </li>))}
                 <li className='navListItem'>
-                    <a className='link'>about</a>
-                </li>
-                <li className='navListItem'>
-                    <a className='link'>experience</a>
-                </li>
-                <li className='navListItem'>
-                    <a className='link'>work</a>
-                </li>
-                <li className='navListItem'>
-                    <a className='link'>contact</a>
-                </li>
-                <li className='navListItem'>
-                    <a className='link'>resume</a>
+                    <a className='link'>Resume</a>
                 </li>
             </ul>         
         </nav>  

@@ -7,14 +7,14 @@
 @layer components {
     .navListItem {
         @apply list-none;
-        @apply inline;
-        @apply m-4;
+        @apply mx-4;
+        @apply my-2;
         @apply font-montserrat;
         @apply font-normal;        
     }
-    .navListItem:first-child {
+    /* .navListItem:first-child {
         @apply ml-0;
-    }
+    } */
     .link {
         @apply transition;
         @apply ease-in-out;

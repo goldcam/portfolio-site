@@ -24,17 +24,12 @@ export class AppComponent extends PureComponent<AppComponentProps> {
     } = this.props
     return ( 
     <>
-      <Nav />
       <div className="lg:flex lg:justify-between max-w-screen-lg mx-auto">
         <Header />
-
-        <section className='flex pt-24 lg:w-3/5 lg:py-24'>
-       
-          <main>
+        <main className='flex pt-20 lg:w-3/6 lg:py-20 px-4'>       
             <AboutComponent />
-          </main>
-          
-        </section>
+        </main>
+        <Nav />
       </div>
       {/* <Footer /> */}
     </>
