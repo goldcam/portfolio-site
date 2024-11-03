@@ -10,19 +10,27 @@
         @apply mx-4;
         @apply my-2;
         @apply font-montserrat;
-        @apply font-normal;        
+        @apply font-normal;    
+        @apply transition-all;
+        @apply ease-in-out;  
+        @apply duration-700; 
     }
     /* .navListItem:first-child {
         @apply ml-0;
     } */
     .link {
-        @apply transition;
+        @apply transition-all;
         @apply ease-in-out;
         @apply duration-300;
     }
-    .link:hover{ 
+    .link:hover, .active{ 
        @apply text-teal;       
     }
+    .active {
+        @apply ml-8;
+        @apply mr-4;
+    }
+
     .link svg {
         @apply inline;
     }
