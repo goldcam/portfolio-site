@@ -1,0 +1,57 @@
+{
+   "experience": [
+        {
+            "company": "Gamigo / WildTangent",
+            "link": "https://www.wildtangent.com/",
+            "location": "Redmond | Bellevue, WA | Remote",
+            "dates": "2015 — 2024",
+            "positions": [{
+                "title":"Frontend Web Developer (2020 — 2024)",
+                "description": "Crafted user-friendly interface widgets for web browsers and a Chromium Embedded Framework application to enhance user experience. Ensured code quality through the creation of unit tests, integration tests, and conducting peer code reviews. Developed templates for transactional and marketing emails using HTML, CSS, and Jinja. Led maintenance efforts for the company's WordPress website.  ",
+                "bullets": [
+                    "Established new e-commerce website tailored to specific business requirements, ensuring optimal functionality and user experience.",
+                    "Enhanced the membership subscription model by introducing a monthly perk, offering users a redeemable token for a game, thereby increasing user engagement and retention.",
+                    "Implemented subscription payment enhancements, enabling PayPal vault payments to streamline the checkout process and improve customer convenience."
+                ]
+            }, {
+                "title": "Web Designer (2015 — 2020)",
+                "description": "Utilized design and web development expertise to create promotional materials, templates, and creative assets for the marketing department. Crafted various materials for advertising, social media, landing pages, logos, etc., using Adobe Creative Suite. Managed the company's WordPress site by developing custom page layouts, templates, and widgets, proficient in HTML, PHP, CSS, and JavaScript.",
+                "bullets": [
+                    "Designed multiple promotional mini game landing pages, enhancing user engagement and online marketing efforts.",
+                    "Developed mobile banners and interstitials ads with deeplink support for mobile game downloads using Google DoubleClick for Publishers.",
+                    "Created and implemented numerous email campaigns, both marketing and transactional, ensuring full responsiveness and cross-client support.",
+                    "Key contributor to launch of the corporate WordPress site, enhancing online presence."
+                ]
+
+            }
+        ],
+        "keywords": "HTML, CSS, Sass, Tailwind CSS, JavaScript, TypeScript, Handlebars, React.js, Redux, Node.js, GIT, GitLab, AWS lambdas, REST APIs, and GraphQL"            
+        },
+        {
+            "company": "Committee for Children",
+            "link": "https://www.cfchildren.org/", 
+            "location": "Seattle, WA",
+            "dates": "2014 — 2015",
+            "positions": [
+                {
+                    "title": "Web Designer",
+                    "description": "Designed visually appealing and user-friendly websites that enhanced the overall user experience and increased engagement. Collaborated with clients to understand their design requirements and create custom website solutions that met their specific needs and objectives. Utilized industry-leading design tools and software to create high-quality layouts, graphics, and interfaces for websites.",
+                    "bullets": [
+                        "Established new e-commerce website tailored to specific business requirements, ensuring optimal functionality and user experience.",
+                        "Enhanced the membership subscription model by introducing a monthly perk, offering users a redeemable token for a game, thereby increasing user engagement and retention.",
+                        "Implemented subscription payment enhancements, enabling PayPal vault payments to streamline the checkout process and improve customer convenience."
+                    ]
+                    
+                }
+            ],
+            "keywords": "HTML, CSS, JavaScript, jQuery, Photoshop, Illustrator, InDesign"
+        }
+    ],
+    "additionalExperience": [
+        {"company": "Pink Kitty Creative", "title": "Production Artist", "locarion": "Las Vegas, NV", "dates": "2013"},
+        {"company": "Eagle Quest", "title": "Visual Communication Specialist", "locarion": "Las Vegas, NV", "dates": "2011-2012"}
+
+    ]
+    
+
+}

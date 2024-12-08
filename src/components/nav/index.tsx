@@ -18,7 +18,7 @@ export interface NavState {
 
 
 
-export class NavComponent extends PureComponent<NavProps, NavState> {
+export class NavComponent extends PureComponent<{}, NavState> {
     constructor(props: Readonly<NavProps>) {
         super(props);
         this.state = {

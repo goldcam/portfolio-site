@@ -43,7 +43,10 @@
         @apply m-2;
     }
     .bulletList li {
-        @apply list-disc my-2 font-montserrat text-whiteish text-sm;        
+        @apply list-disc my-2 font-montserrat text-whiteish text-xs;        
+    }
+    .sectionHeader {
+        @apply text-teal font-light font-montserrat text-xl mb-2;
     }
 
     

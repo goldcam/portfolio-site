@@ -4,8 +4,8 @@ import  { PureComponent, } from 'react';
 export class AboutComponent extends PureComponent {
     render () {
         return (
-        <section className='mb-12' id='about'>
-            {/* <h3 className='text-2xl'>About</h3> */}            
+        <section className='mb-20' id='about'>
+                <h2 className='sectionHeader'>About</h2>           
                 <p className='block font-montserrat text-whiteish text-sm pb-3'>Innovative and detail-oriented frontend web developer with 10+ years of combined experience in web development and design, specializing in crafting visually appealing and highly functional user interfaces.
                 </p>   
                 <p className='block font-montserrat text-whiteish text-sm'>

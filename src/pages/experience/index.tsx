@@ -1,43 +1,72 @@
-
-
 import  { PureComponent, } from 'react';
 
+import resume from "../../json/resume.json";
 
-export class ExperienceComponent extends PureComponent {
+
+export interface ExperienceProps {
+
+}
+export interface ExperienceState {
+    experience: typeof resume.experience;
+    additionalExperience: typeof resume.additionalExperience;
+
+}
+
+
+export class ExperienceComponent extends PureComponent<{}, ExperienceState> {
+
+    constructor(props: Readonly<{}>) {
+        super(props);
+        this.state = {
+            experience: resume.experience,
+            additionalExperience: resume.additionalExperience
+        }
+    }
+
+
     render () {
+
+        const {experience, additionalExperience} = this.state;
+
+        
         return (
         <section className='flex flex-col' id='experience'>
-            {/* <h3 className='text-2xl'>Experience</h3> */}
-            <div>
-                    <h3 className='block pb-2 text-teal font-semibold'>
-                    Gamigo / WildTangent 2015 — 2024
-                </h3>
-                <p className='font-montserrat text-whiteish text-sm'>
-                Crafted user-friendly interface widgets for web browsers and a Chromium Embedded Framework application to enhance user experience. Ensured code quality through the creation of unit tests, integration tests, and conducting peer code reviews. Developed templates for transactional and marketing emails using HTML, CSS, and Jinja. Led maintenance efforts for the company's WordPress website.           
-                </p>
-                <ul className='bulletList'>
-                    <li>Established new e-commerce website tailored to specific business requirements, ensuring optimal functionality and user experience.</li>
-                    <li>Enhanced the membership subscription model by introducing a monthly perk, offering users a redeemable token for a game, thereby increasing user engagement and retention.</li>
-                    <li>
-                    Implemented subscription payment enhancements, enabling PayPal vault payments to streamline the checkout process and improve customer convenience.
-                    </li>
-                </ul>
-                <p className='text-xs text-teal'>
-                        HTML, CSS, Sass, Tailwind CSS, JavaScript, TypeScript, Handlebars, React.js, Redux, Node.js, GIT, GitLab, AWS lambdas, REST APIs, and GraphQL
-                        
-                    </p>
-                <div>
-                   
-                    {/* <i className="bi bi-filetype-html"></i>
-                    <i className="bi bi-filetype-css"></i>
-                    <i className="bi bi-filetype-scss"></i>
-                    <i className="bi bi-filetype-js"></i>
-                    <i className="bi bi-filetype-tsx"></i>
-                    <i className="bi bi-filetype-jsx"></i>
-                    <i className="bi bi-git"></i> */}
+                <h2 className='sectionHeader'>Experience</h2>
+                {experience.map((item, i) => <div key={i} className='mb-12'>
+                            <h3 className='block font-black text-whiteish font-oswald'>
+                                {item.company} {item.dates} {!!item.link ? <a href={item.link} className='ml-1 link' target='_blank'><i className="bi bi-link-45deg"></i></a> : null}                                                   
+                            </h3>
+                            {/* <p className='text-xs'> 
+                                {item.location}
+                            </p> */}
+                            {item.positions.map((position, j) => {
+                                return (
+                                    <div key={j} >
+                                        <p className='pb-2 text-teal font-normal text-sm'>{position.title}</p>
+                                        <p className='font-montserrat text-whiteish text-xs'>
+                                            {position.description}
+                                        </p>
+                                        <ul className='bulletList'>
+                                            {position.bullets.map((bullet, b) => <li key={b}>{bullet}</li>) }
+                                        </ul>
+                                    </div>
+                                )                               
+                            })}
+                            <p className='text-xs text-teal'>{item.keywords}</p>
+                        </div>
+                    )
+                }
+                <h2 className='sectionHeader'>Additional Experience</h2>
 
-                </div>
-            </div>                                 
+                {additionalExperience.map((item, i) => 
+                    <div key={i} className=''>
+                        <p className=''>
+                            <span className='text-whiteish font-oswald font-black text-sm'>{item.title}</span> - <span className='font-thin text-xs'>{item.company}, ({item.dates})</span>
+                        </p>
+                    </div>
+                )}
+
+            
         </section>
         ) 
     }
