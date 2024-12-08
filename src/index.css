@@ -5,43 +5,28 @@
 @tailwind utilities;
 
 @layer components {
-    .navListItem {
-        @apply list-none;
-        @apply mx-4;
-        @apply my-2;
-        @apply font-montserrat;
-        @apply font-normal;    
-        @apply transition-all;
-        @apply ease-in-out;  
-        @apply duration-700; 
+    #root{
+        @apply m-0;
     }
-    /* .navListItem:first-child {
+    .navListItem {
+        @apply list-none mx-4 my-2 font-montserrat font-normal; 
+    }
+    .navListItem:first-child {
         @apply ml-0;
-    } */
+    }
     .link {
-        @apply transition-all;
-        @apply ease-in-out;
-        @apply duration-300;
+        @apply transition-colors ease-in duration-300;
     }
     .link:hover, .active{ 
        @apply text-teal;       
     }
-    .active {
-        @apply ml-8;
-        @apply mr-4;
-    }
-
     .link svg {
         @apply inline;
     }
     .socialLinks {
-        @apply list-none;
-        @apply inline;
-        @apply m-3;
-        @apply text-whiteish;
-        @apply text-xl
+        @apply list-none inline m-3 text-whiteish text-xl;
     }
-    .backgraound {
+    .background {
         @apply bg-darkBackground;        
         /* background:linear-gradient(180deg, rgba(2,10,6,1) 0%, rgba(25,52,37,1) 87%, rgba(19,54,34,1) 100%); */
         /* background: linear-gradient(180deg, rgba(2,10,6,1) 0%, rgba(25,52,37,1) 87%, rgba(13,42,25,1) 100%); */
@@ -52,8 +37,13 @@
         /* background: linear-gradient(180deg, rgba(2,10,6,1) 57%, rgba(26,42,33,1) 100%); */
 
         background: linear-gradient(180deg, rgba(2,10,6,1) 0%, rgba(11,20,15,1) 100%);
-        @apply bg-no-repeat;
-        @apply bg-fixed;
+        @apply bg-no-repeat bg-fixed;
+    }
+    .bulletList {
+        @apply m-2;
+    }
+    .bulletList li {
+        @apply list-disc my-2 font-montserrat text-whiteish text-sm;        
     }
 
     

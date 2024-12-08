@@ -2,6 +2,7 @@ import  { PureComponent, ComponentType } from 'react';
 
 
 import AboutComponent from './pages/about';
+import ExperienceComponent from './pages/experience';
 
 export interface AppComponentProps {
   Header:ComponentType;
@@ -26,10 +27,10 @@ export class AppComponent extends PureComponent<AppComponentProps> {
     <>
       <div className="lg:flex lg:justify-between max-w-screen-lg mx-auto">
         <Header />
-        <main className='flex pt-20 lg:w-3/6 lg:py-20 px-4'>       
+        <main className='flex flex-col pt-20 lg:w-3/6 lg:py-20 px-4'>       
             <AboutComponent />
+            <ExperienceComponent />
         </main>
-        <Nav />
       </div>
       {/* <Footer /> */}
     </>
