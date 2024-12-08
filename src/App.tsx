@@ -3,6 +3,7 @@ import  { PureComponent, ComponentType } from 'react';
 
 import AboutComponent from './pages/about';
 import ExperienceComponent from './pages/experience';
+import WorkComponent from './pages/work';
 
 export interface AppComponentProps {
   Header:ComponentType;
@@ -18,10 +19,7 @@ export class AppComponent extends PureComponent<AppComponentProps> {
   render() {
     const {
       Header,
-      Name,
       Footer,
-      SocialLinks,
-      Nav
     } = this.props
     return ( 
     <>
@@ -30,6 +28,7 @@ export class AppComponent extends PureComponent<AppComponentProps> {
         <main className='flex flex-col pt-20 lg:w-3/6 lg:py-20 px-4'>       
             <AboutComponent />
             <ExperienceComponent />
+            <WorkComponent />
         </main>
       </div>
       {/* <Footer /> */}

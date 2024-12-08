@@ -1,6 +1,8 @@
 import React, { PureComponent, } from 'react';
 // import { useLocation } from 'react-router-dom';
 
+import { Link } from 'react-scroll';
+
 export enum NavItems {
     About = 'about',
     Experience= 'experience',
@@ -33,7 +35,7 @@ export class NavComponent extends PureComponent<{}, NavState> {
         this.setState({active:anchorId});        
     }
 
-    hadleClick(_evt:React.MouseEvent<HTMLSpanElement>, item:string) {       
+    hadleClick(item:string) {       
         // evt.stopPropagation();
         // evt.preventDefault();
         this.setState({active:item.toLocaleLowerCase()});        
@@ -48,7 +50,7 @@ export class NavComponent extends PureComponent<{}, NavState> {
             <nav className="nav pt-2">
             <ul className='flex'>
                     {navItems.map((item, key) => (<li key={key} className={`navListItem ${item.toLocaleLowerCase() === active ? 'active' : '' }`}>
-                    <a href={`#${item.toLocaleLowerCase()}`} className='link' onClick={(e) => this.hadleClick(e, item)}>{item}</a>
+                        <Link activeClass="active" to={`${item.toLocaleLowerCase()}`} className='link' smooth={true} duration={700} offset={-80} onClick={() => this.hadleClick(item)}>{item}</Link>
                 </li>))}
             </ul>         
         </nav>  

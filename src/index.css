@@ -15,10 +15,10 @@
         @apply ml-0;
     }
     .link {
-        @apply transition-colors ease-in duration-300;
+        @apply transition-colors ease-in duration-300 cursor-pointer;
     }
     .link:hover, .active{ 
-       @apply text-teal;       
+       @apply text-teal cursor-pointer;       
     }
     .link svg {
         @apply inline;
