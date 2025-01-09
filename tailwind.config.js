@@ -1,4 +1,7 @@
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
+  darkMode: 'selector',
   future: {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
@@ -20,9 +23,13 @@ module.exports = {
     },
     extend: {},
   },
-  variants: {},
+  variants: {
+    // backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd']
+  },
   plugins: [
     require('tailwindcss'),
     require('autoprefixer'),
+    // require('tailwindcss-dark-mode')
   ],
 }
+

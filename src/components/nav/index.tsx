@@ -1,18 +1,13 @@
 import React, { PureComponent, } from 'react';
-// import { useLocation } from 'react-router-dom';
 
 import { Link } from 'react-scroll';
 
-export enum NavItems {
-    About = 'about',
-    Experience= 'experience',
-    Work = 'work',
-    // Contact = 'contact', 
-}
+export const NavItems = {
+    About : 'about',
+    Experience: 'experience',
+    Work : 'work',
+} as const;
 
-export interface NavProps {
-    // navItems: NavItems;
-}
 
 export interface NavState {
     active: string | undefined;
@@ -21,7 +16,7 @@ export interface NavState {
 
 
 export class NavComponent extends PureComponent<{}, NavState> {
-    constructor(props: Readonly<NavProps>) {
+    constructor(props: Readonly<{}>) {
         super(props);
         this.state = {
             active: undefined,
@@ -30,27 +25,23 @@ export class NavComponent extends PureComponent<{}, NavState> {
     }
 
     componentDidMount(): void {
-        // const location = useLocation();
         const anchorId = window.location.hash.substring(1);        
         this.setState({active:anchorId});        
     }
 
-    hadleClick(item:string) {       
-        // evt.stopPropagation();
-        // evt.preventDefault();
-        this.setState({active:item.toLocaleLowerCase()});        
+    hadleClick(item:string) {      
+        this.setState({active:item});        
     }
 
 
     render () {
-        // const {NavItems} = this.props;
-        const navItems = Object.keys(NavItems);
+        const navItems = Object.values(NavItems);
         const {active} = this.state;        
         return (
-            <nav className="nav pt-2">
+            <nav className="nav pt-2 hidden lg:block">
             <ul className='flex'>
-                    {navItems.map((item, key) => (<li key={key} className={`navListItem ${item.toLocaleLowerCase() === active ? 'active' : '' }`}>
-                        <Link activeClass="active" to={`${item.toLocaleLowerCase()}`} className='link' smooth={true} duration={700} offset={-80} onClick={() => this.hadleClick(item)}>{item}</Link>
+                    {navItems.map((item, key) => (<li key={key} className={`navListItem ${item === active ? 'active' : '' }`}>
+                        <Link activeClass="active" to={`${item}`} className='link capitalize' smooth={true} duration={700} offset={-80} onClick={() => this.hadleClick(item)}>{item}</Link>
                 </li>))}
             </ul>         
         </nav>  

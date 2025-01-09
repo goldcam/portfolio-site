@@ -3,9 +3,6 @@ import  { PureComponent, } from 'react';
 import resume from "../../json/resume.json";
 
 
-export interface ExperienceProps {
-
-}
 export interface ExperienceState {
     experience: typeof resume.experience;
     additionalExperience: typeof resume.additionalExperience;
@@ -30,7 +27,7 @@ export class ExperienceComponent extends PureComponent<{}, ExperienceState> {
 
         
         return (
-        <section className='flex flex-col' id='experience'>
+            <section className='flex flex-col mb-20' id='experience'>
                 <h2 className='sectionHeader'>Experience</h2>
                 {experience.map((item, i) => <div key={i} className='mb-12'>
                             <h3 className='block font-black text-whiteish font-oswald'>

@@ -26,6 +26,9 @@
     .socialLinks {
         @apply list-none inline m-3 text-whiteish text-xl;
     }
+    .socialLinks:first-child {
+        @apply ml-0;
+    }
     .background {
         @apply bg-darkBackground;        
         /* background:linear-gradient(180deg, rgba(2,10,6,1) 0%, rgba(25,52,37,1) 87%, rgba(19,54,34,1) 100%); */
@@ -49,6 +52,11 @@
         @apply text-teal font-light font-montserrat text-xl mb-2;
     }
 
+    .paragraph {
+        @apply block font-montserrat text-sm pb-3;
+    }
+    
+
     
     
 }
@@ -67,4 +75,7 @@
 html {
     font-family: Oswald, Arial, sans-serif;
 }
-  
+
+@layer base {
+    
+}

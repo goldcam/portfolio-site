@@ -4,6 +4,7 @@ import  { PureComponent, ComponentType } from 'react';
 import AboutComponent from './pages/about';
 import ExperienceComponent from './pages/experience';
 import WorkComponent from './pages/work';
+import ModeToggleComponent from './components/modeToggle';
 
 export interface AppComponentProps {
   Header:ComponentType;
@@ -19,20 +20,22 @@ export class AppComponent extends PureComponent<AppComponentProps> {
   render() {
     const {
       Header,
-      Footer,
+      // Footer,
+      Name
     } = this.props
     return ( 
-    <>
-      <div className="lg:flex lg:justify-between max-w-screen-lg mx-auto">
-        <Header />
-        <main className='flex flex-col pt-20 lg:w-3/6 lg:py-20 px-4'>       
+      <div className='px-4 max-w-screen-xl mx-auto '>
+        <ModeToggleComponent />
+      <div className="lg:flex lg:justify-between lg:gap-3  ">
+        <Header />        
+        <main className='flex flex-col pt-20 lg:w-9/12 lg:py-20 '>       
             <AboutComponent />
             <ExperienceComponent />
             <WorkComponent />
         </main>
       </div>
       {/* <Footer /> */}
-    </>
+    </div>
       
     )
   }
