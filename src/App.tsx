@@ -32,7 +32,7 @@ export class AppComponent extends PureComponent<AppComponentProps> {
         <main className='flex flex-col pt-20 lg:w-9/12 lg:py-20 '>       
             <AboutComponent />
             <ExperienceComponent />
-            <WorkComponent />
+            {/* <WorkComponent /> */}
         </main>
       </div>
        
