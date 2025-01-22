@@ -6,7 +6,7 @@
 
 @layer components {
     #root{
-        @apply m-0;
+        @apply m-0 ;
     }
     .navListItem {
         @apply list-none mx-4 my-2 font-montserrat font-normal; 
@@ -24,13 +24,13 @@
         @apply inline;
     }
     .socialLinks {
-        @apply list-none inline m-3 text-whiteish text-xl;
+        @apply list-none inline m-3  text-xl;
     }
     .socialLinks:first-child {
         @apply ml-0;
     }
     .background {
-        @apply bg-darkBackground;        
+        @apply bg-darkBlack;        
         /* background:linear-gradient(180deg, rgba(2,10,6,1) 0%, rgba(25,52,37,1) 87%, rgba(19,54,34,1) 100%); */
         /* background: linear-gradient(180deg, rgba(2,10,6,1) 0%, rgba(25,52,37,1) 87%, rgba(13,42,25,1) 100%); */
 
@@ -46,7 +46,7 @@
         @apply m-2;
     }
     .bulletList li {
-        @apply list-disc my-2 font-montserrat text-whiteish text-xs;        
+        @apply list-disc my-2 font-montserrat text-xs;        
     }
     .sectionHeader {
         @apply text-teal font-light font-montserrat text-xl mb-2;
@@ -77,5 +77,17 @@ html {
 }
 
 @layer base {
-    
+    .dark {
+        @apply bg-darkBlack text-whiteish;
+        background: linear-gradient(180deg, rgba(2, 10, 6, 1) 0%, rgba(11, 20, 15, 1) 100%);
+        @apply bg-no-repeat bg-fixed;
+    }
+
+         :root {
+             --text: #020b06;           
+             --background: #dfdfdf;
+             --primary: #038C8C;
+             --secondary: #56b0b0;
+             --accent: #ccd7f5;
+         }
 }

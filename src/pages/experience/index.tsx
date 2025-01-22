@@ -30,7 +30,7 @@ export class ExperienceComponent extends PureComponent<{}, ExperienceState> {
             <section className='flex flex-col mb-20' id='experience'>
                 <h2 className='sectionHeader'>Experience</h2>
                 {experience.map((item, i) => <div key={i} className='mb-12'>
-                            <h3 className='block font-black text-whiteish font-oswald'>
+                            <h3 className='block font-black font-oswald'>
                                 {item.company} {item.dates} {!!item.link ? <a href={item.link} className='ml-1 link' target='_blank'><i className="bi bi-link-45deg"></i></a> : null}                                                   
                             </h3>
                             {/* <p className='text-xs'> 
@@ -40,7 +40,7 @@ export class ExperienceComponent extends PureComponent<{}, ExperienceState> {
                                 return (
                                     <div key={j} >
                                         <p className='pb-2 text-teal font-normal text-sm'>{position.title}</p>
-                                        <p className='font-montserrat text-whiteish text-xs'>
+                                        <p className='font-montserrat  text-xs'>
                                             {position.description}
                                         </p>
                                         <ul className='bulletList'>
@@ -58,7 +58,7 @@ export class ExperienceComponent extends PureComponent<{}, ExperienceState> {
                 {additionalExperience.map((item, i) => 
                     <div key={i} className=''>
                         <p className=''>
-                            <span className='text-whiteish font-oswald font-black text-sm'>{item.title}</span> - <span className='font-thin text-xs'>{item.company}, ({item.dates})</span>
+                            <span className='font-oswald font-black text-sm'>{item.title}</span> - <span className='font-thin text-xs'>{item.company}, ({item.dates})</span>
                         </p>
                     </div>
                 )}

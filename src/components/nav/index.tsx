@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 export const NavItems = {
     About : 'about',
     Experience: 'experience',
-    Work : 'work',
+    // Work : 'work',
 } as const;
 
 
@@ -21,7 +21,7 @@ export class NavComponent extends PureComponent<{}, NavState> {
         this.state = {
             active: undefined,
         }
-        this.hadleClick = this.hadleClick.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount(): void {
@@ -29,7 +29,7 @@ export class NavComponent extends PureComponent<{}, NavState> {
         this.setState({active:anchorId});        
     }
 
-    hadleClick(item:string) {      
+    handleClick(item:string) {      
         this.setState({active:item});        
     }
 
@@ -40,8 +40,8 @@ export class NavComponent extends PureComponent<{}, NavState> {
         return (
             <nav className="nav pt-2 hidden lg:block">
             <ul className='flex'>
-                    {navItems.map((item, key) => (<li key={key} className={`navListItem ${item === active ? 'active' : '' }`}>
-                        <Link activeClass="active" to={`${item}`} className='link capitalize' smooth={true} duration={700} offset={-80} onClick={() => this.hadleClick(item)}>{item}</Link>
+                    {navItems.map((item, key) => (<li key={key} className={` navListItem ${item === active ? 'active' : '' }`}>
+                        <Link activeClass="active" to={`${item}`} className='link capitalize' smooth={true} duration={700} offset={-80} onClick={() => this.handleClick(item)}>{item}</Link>
                 </li>))}
             </ul>         
         </nav>  
