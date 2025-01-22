@@ -55,9 +55,12 @@ export class ModeToggleComponent extends PureComponent<{}, modeToggle> {
     render() {
         const { darkMode } = this.state;
         return (
-            <button className='focus:outline-none' onClick={this.handleClick}>
-                {darkMode === false ? <i className="bi bi-sun-fill"></i> : <i className="bi bi-moon-stars-fill "></i>}
-            </button>  
+           
+
+            <button className='focus:outline-none link' onClick={this.handleClick}>
+                        {darkMode === false ? <i className="bi bi-sun-fill"></i> : <i className="bi bi-moon-stars-fill "></i>}
+                    </button>  
+             
         ) 
     }
 }

@@ -24,8 +24,9 @@ export class AppComponent extends PureComponent<AppComponentProps> {
       Name
     } = this.props
     return ( 
-      <div className='px-4 max-w-screen-xl mx-auto '>
-        <ModeToggleComponent />
+               
+      <div className='px-4 max-w-screen-xl mx-auto'>       
+               
       <div className="lg:flex lg:justify-between lg:gap-3  ">
         <Header />        
         <main className='flex flex-col pt-20 lg:w-9/12 lg:py-20 '>       
@@ -34,8 +35,10 @@ export class AppComponent extends PureComponent<AppComponentProps> {
             <WorkComponent />
         </main>
       </div>
+       
       {/* <Footer /> */}
     </div>
+        
       
     )
   }
