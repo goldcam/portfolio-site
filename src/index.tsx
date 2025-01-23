@@ -9,7 +9,7 @@ import Header from './components/header/index';
 import Name from './components/name/index';
 import Footer from './components/footer/index';
 import SocialLinks from './components/socialLinks';
-import Nav, {NavItems} from './components/nav';
+import Nav from './components/nav';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 

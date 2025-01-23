@@ -31,7 +31,11 @@ export class ExperienceComponent extends PureComponent<{}, ExperienceState> {
                 <h2 className='sectionHeader'>Experience</h2>
                 {experience.map((item, i) => <div key={i} className='mb-12'>
                             <h3 className='block font-black font-oswald'>
-                                {item.company} {item.dates} {!!item.link ? <a href={item.link} className='ml-1 link' target='_blank'><i className="bi bi-link-45deg"></i></a> : null}                                                   
+                        {item.company} {item.dates} {!!item.link ? 
+                        <a href={item.link} className='ml-1 link' target='_blank' rel="noreferrer">
+                                <i className="bi bi-link-45deg" aria-hidden="true"></i>
+                                <span className='hidden'>{item.company} Website</span>
+                        </a> : null}                                                   
                             </h3>
                             {/* <p className='text-xs'> 
                                 {item.location}
@@ -40,7 +44,7 @@ export class ExperienceComponent extends PureComponent<{}, ExperienceState> {
                                 return (
                                     <div key={j} >
                                         <p className='pb-2 text-teal font-normal text-sm'>{position.title}</p>
-                                        <p className='font-montserrat  text-xs'>
+                                        <p className='font-montserrat  text-sm'>
                                             {position.description}
                                         </p>
                                         <ul className='bulletList'>
@@ -49,7 +53,7 @@ export class ExperienceComponent extends PureComponent<{}, ExperienceState> {
                                     </div>
                                 )                               
                             })}
-                            <p className='text-xs text-teal'>{item.keywords}</p>
+                    <p className='keywords-text'>{item.keywords}</p>
                         </div>
                     )
                 }

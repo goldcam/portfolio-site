@@ -46,7 +46,7 @@
         @apply m-2;
     }
     .bulletList li {
-        @apply list-disc my-2 font-montserrat text-xs;        
+        @apply list-disc my-2 font-montserrat text-sm;        
     }
     .sectionHeader {
         @apply text-teal font-light font-montserrat text-xl mb-2;
@@ -55,7 +55,9 @@
     .paragraph {
         @apply block font-montserrat text-sm pb-3;
     }
-    
+    .keywords-text {
+        @apply text-xs text-teal;
+    }
 
     
     

@@ -2,6 +2,7 @@
   "name": "portfolio-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -12,6 +13,7 @@
     "@types/react-dom": "^18.0.0",
     "autoprefixer": "^10.4.20",
     "bootstrap-icons": "^1.11.3",
+    "dotenv": "^16.4.7",
     "postcss": "^8.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -23,6 +25,7 @@
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/jest": "^29.5.14",
     "@types/react-scroll": "^1.8.10",
     "eslint-plugin-jest": "^23.13.2",
@@ -35,7 +38,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build_staging": "PUBLIC_URL=https://cameron-townsend.com/ react-scripts build"
   },
   "eslintConfig": {
     "extends": [

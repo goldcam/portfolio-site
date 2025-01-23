@@ -3,8 +3,8 @@ import  { PureComponent, ComponentType } from 'react';
 
 import AboutComponent from './pages/about';
 import ExperienceComponent from './pages/experience';
-import WorkComponent from './pages/work';
-import ModeToggleComponent from './components/modeToggle';
+// import WorkComponent from './pages/work';
+// import ModeToggleComponent from './components/modeToggle';
 
 export interface AppComponentProps {
   Header:ComponentType;
@@ -21,7 +21,7 @@ export class AppComponent extends PureComponent<AppComponentProps> {
     const {
       Header,
       // Footer,
-      Name
+      // Name
     } = this.props
     return ( 
                
