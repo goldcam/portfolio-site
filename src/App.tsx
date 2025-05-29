@@ -3,6 +3,7 @@ import  { PureComponent, ComponentType } from 'react';
 
 import AboutComponent from './pages/about';
 import ExperienceComponent from './pages/experience';
+import ProjectsComponent from './pages/projects';
 // import WorkComponent from './pages/work';
 // import ModeToggleComponent from './components/modeToggle';
 
@@ -32,7 +33,7 @@ export class AppComponent extends PureComponent<AppComponentProps> {
         <main className='flex flex-col pt-20 lg:w-9/12 lg:py-20 '>       
             <AboutComponent />
             <ExperienceComponent />
-            {/* <WorkComponent /> */}
+            <ProjectsComponent />
         </main>
       </div>
        

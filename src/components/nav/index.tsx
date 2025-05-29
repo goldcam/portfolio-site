@@ -5,6 +5,7 @@ import { Link } from 'react-scroll';
 export const NavItems = {
     About : 'about',
     Experience: 'experience',
+    Projects: 'projects'
     // Work : 'work',
 } as const;
 

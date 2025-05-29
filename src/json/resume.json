@@ -7,11 +7,13 @@
             "dates": "2015 — 2024",
             "positions": [{
                 "title":"Frontend Web Developer (2020 — 2024)",
-                "description": "Crafted user-friendly interface widgets for web browsers and a Chromium Embedded Framework application to enhance user experience. Ensured code quality through the creation of unit tests, integration tests, and conducting peer code reviews. Developed templates for transactional and marketing emails using HTML, CSS, and Jinja. Led maintenance efforts for the company's WordPress website.  ",
+                "description": "Crafted user-friendly interface widgets for web browsers and a Chromium Embedded Framework application to enhance user experience. Ensured code quality through the creation of unit tests, integration tests, and conducting peer code reviews. Developed templates for transactional and marketing emails using HTML, CSS, and Jinja. Led maintenance efforts for the company's WordPress website.",
                 "bullets": [
-                    "Established new e-commerce website tailored to specific business requirements, ensuring optimal functionality and user experience.",
-                    "Enhanced the membership subscription model by introducing a monthly perk, offering users a redeemable token for a game, thereby increasing user engagement and retention.",
-                    "Implemented subscription payment enhancements, enabling PayPal vault payments to streamline the checkout process and improve customer convenience."
+                    "Engineered modular, scalable interface components for desktop and web using JavaScript frameworks (React/Vue), improving maintainability and user experience.",
+                    "Built cloud-native features via AWS Lambda and microservices architecture, enhancing performance and scalability.",
+                    "Maintained high code quality through unit/integration testing and peer code reviews in Agile sprints.",
+                    "Applied WCAG standards to boost accessibility and implemented local caching for improved site speed.","E-commerce implementation on BigCommerce platform, delivering responsive user experiences tailored to business goals.",
+                    "Increased subscription engagement through monthly perks and streamlined checkout flow with PayPal Vault."
                 ]
             }, {
                 "title": "Web Designer (2015 — 2020)",
