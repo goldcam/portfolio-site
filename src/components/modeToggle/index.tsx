@@ -3,13 +3,13 @@ import React, { PureComponent, } from 'react';
 
 
 
-export interface modeToggle {
+export interface ModeToggle {
     darkMode: boolean;
 }
 
 
 
-export class ModeToggleComponent extends PureComponent<{}, modeToggle> {
+export class ModeToggleComponent extends PureComponent<{}, ModeToggle> {
     constructor(props: Readonly<{}>) {
         super(props);
         this.state = {

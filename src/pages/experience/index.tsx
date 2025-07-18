@@ -43,8 +43,8 @@ export class ExperienceComponent extends PureComponent<{}, ExperienceState> {
                             {item.positions.map((position, j) => {
                                 return (
                                     <div key={j} >
-                                        <p className='pb-2 text-teal font-normal text-sm'>{position.title}</p>
-                                        <p className='font-montserrat  text-sm'>
+                                        <p className='positionTitle'>{position.title}</p>
+                                        <p className='positionDescription'>
                                             {position.description}
                                         </p>
                                         <ul className='bulletList'>

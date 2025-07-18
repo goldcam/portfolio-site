@@ -1,12 +1,15 @@
 import { PureComponent, } from 'react';
 
+import WebProjectsComponent from './webProjects';
+
 
 export class ProjectsComponent extends PureComponent {
     render() {
         return (
-            <section className='mb-20' id='work'>
+            <section className='mb-20' id='projects'>
                 <h2 className='sectionHeader'>Projects</h2>
-                <h3>Web Projects</h3>               
+                
+                <WebProjectsComponent />             
                 <h3>Design Projects</h3>               
             </section>
         )

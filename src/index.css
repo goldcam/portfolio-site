@@ -42,19 +42,32 @@
         background: linear-gradient(180deg, rgba(2,10,6,1) 0%, rgba(11,20,15,1) 100%);
         @apply bg-no-repeat bg-fixed;
     }
+    .positionTitle {
+        @apply pb-2 text-teal font-normal text-sm leading-6;
+    }
+    .positionDescription {
+        @apply font-montserrat text-sm leading-6;
+    }
+    .projectDescription {
+        @apply font-montserrat text-xs leading-4;
+    }
     .bulletList {
         @apply m-2;
     }
     .bulletList li {
-        @apply list-disc my-2 font-montserrat text-sm;        
+        @apply list-disc my-2 font-montserrat text-sm leading-6;        
     }
     .sectionHeader {
         @apply text-teal font-light font-montserrat text-xl mb-2;
     }
+    .projectHeader {
+        @apply text-teal font-light font-montserrat text-base;
+    }
 
     .paragraph {
-        @apply block font-montserrat text-sm pb-3;
+        @apply block font-montserrat text-sm pb-3 leading-6;
     }
+    
     .keywords-text {
         @apply text-xs text-teal;
     }
@@ -76,6 +89,7 @@
   
 html {
     font-family: Oswald, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 @layer base {
